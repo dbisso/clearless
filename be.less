@@ -1,0 +1,77 @@
+/**
+ * Be Responsive
+ *
+ * These mixins can be called in media queries to generate
+ * breakpoint-specific versions of various classes
+ */
+
+// Proportional Grid
+.be-grid( @bp: 0 ) {
+	(~".be-full-bp@{bp}") {
+		width: 100%;
+	}
+
+	(~".be-one-half-bp@{bp}") {
+		width: 50%;
+	}
+
+	(~".be-one-third-bp@{bp}") {
+		width: 33.333%;
+	}
+
+	(~".be-two-thirds-bp@{bp}") {
+		width: 66.666%;
+	}
+
+	(~".be-one-quarter-bp@{bp}") {
+		width: 25%;
+	}
+
+	(~".be-three-quarters-bp@{bp}") {
+		width: 75%;
+	}
+}
+
+// Layout
+.be-layout( @bp: 0 ) {
+	(~".be-string-bp@{bp}") {
+		.string;
+	}
+
+	(~".be-stream-bp@{bp}") {
+		.stream;
+	}
+}
+
+// Alignment
+.be-alignment( @bp: 0 ) {
+	(~".be-alignleft-bp@{bp}") {
+		.alignleft;
+	}
+
+	(~".be-alignright-bp@{bp}") {
+		.alignright;
+	}
+
+	(~".be-aligncenter-bp@{bp}") {
+		.aligncenter;
+	}
+}
+
+.be-visibility( @bp: 0 ) {
+	(~".be-hidden-bp@{bp}") {
+		display: none;
+	}
+
+	(~".be-visible-bp@{bp}") {
+		display: initial;
+		*display: block; // Assume block - should we do this?
+	}
+}
+
+.be-all( @bp: 0 ) {
+	.be-grid( @bp );
+	.be-layout( @bp );
+	.be-alignment( @bp );
+	.be-visibility( @bp );
+}

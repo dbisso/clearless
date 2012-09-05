@@ -1,0 +1,138 @@
+/**
+ * Alignment
+ */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+	clear: none;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+	clear: none;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/**
+ * Box
+ *
+ * Boxes are isolated blocks with optional styling
+ */
+.box {
+	clear: both;
+	width: auto;
+}
+
+.block {
+	display: block;
+	width: 100%;
+}
+
+/**
+ * Stream
+ *
+ * A stream is a vertical list of items - something like a newsfeed
+ */
+.stream {
+	> * {
+		margin-bottom: @bl;
+		clear: both;
+		display: block;
+	}
+}
+
+.stream-naked {
+	> * {
+		margin-bottom: 0;
+		clear: both;
+		display: block;
+	}
+}
+
+/**
+ * String
+ *
+ * A string is a horizontal list of items - something like beads on a string
+ * Some stuff from YUI grids included to avoid spaces between inline blocks.
+ */
+.string {
+	letter-spacing: -0.3em; /* webkit */
+	*letter-spacing: normal; /* reset IE < 8 */
+    word-spacing: -0.3em; /* IE < 8 && gecko */
+
+	> * {
+		display: inline-block;
+		vertical-align: top;
+
+	    zoom: 1;
+	    *display: inline; /* IE < 8: fake inline-block */
+	    letter-spacing: normal;
+	    word-spacing: normal;
+	    vertical-align: top;
+	}
+}
+
+.blocks {
+
+	> * {
+		float: left;
+		clear: none;
+		> * {
+			line-height: 0;
+			> * {
+				line-height: @bl;
+			}
+		}
+	}
+}
+
+/**
+ * Stack
+ *
+ * A stack is a series of element stacked on top of each other in the z plane
+ * - something like a stack of acetate viewed from above. The child elements are
+ * positioned absolutely to the parent.
+ *
+ * A non-classed element acts as the background layer (e.g. an image). Other
+ * elements overlay this background.
+ */
+.stack {
+	position: relative;
+	display: block;
+
+	> * {
+		z-index: 0;
+	}
+
+	.stack-foreground {
+		position: absolute;
+		z-index: 2;
+	}
+
+	.stack-midground {
+		position: absolute;
+		z-index: 1;
+	}
+
+	.stack-top {
+		top: 0;
+	}
+
+	.stack-middle {
+		top: 45%;
+	}
+
+	.stack-bottom {
+		bottom: 0;
+	}
+
+}

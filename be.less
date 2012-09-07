@@ -15,6 +15,18 @@
 		width: 50%;
 	}
 
+	(~".be-one-fifth-bp@{bp}") {
+		width: 20%;
+	}
+
+	(~".be-two-fifths-bp@{bp}") {
+		width: 40%;
+	}
+
+	(~".be-three-fifths-bp@{bp}") {
+		width: 60%;
+	}
+
 	(~".be-one-third-bp@{bp}") {
 		width: 33.333%;
 	}
@@ -58,6 +70,12 @@
 	}
 }
 
+.be-ear( @bp: 0 ) {
+	(~".be-ear-left-bp@{bp}") {
+		.ear-left;
+	}
+}
+
 .be-visibility( @bp: 0 ) {
 	(~".be-hidden-bp@{bp}") {
 		display: none;
@@ -74,4 +92,5 @@
 	.be-layout( @bp );
 	.be-alignment( @bp );
 	.be-visibility( @bp );
+	.be-ear( @bp );
 }

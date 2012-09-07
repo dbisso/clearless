@@ -13,6 +13,8 @@
 	float: right;
 	margin-left: 1.5em;
 	clear: none;
+	right: 0;
+	left: auto;
 }
 
 .aligncenter {
@@ -20,6 +22,17 @@
 	display: block;
 	margin: 0 auto;
 	text-align: center;
+}
+
+.position-head {
+	position: absolute;
+	top: 0;
+	bottom: auto;
+}
+
+.naked {
+	margin: 0;
+	padding: 0;
 }
 
 /**
@@ -136,3 +149,22 @@
 	}
 
 }
+
+
+/**
+ * Ears
+ *
+ * An ear stick out to the side.
+ */
+.ear-left {
+	margin-left: 0 - @ear_size;
+
+	.beta & {
+		margin-left: 0 - @ear_size * 0.75;
+	}
+
+	.gamma & {
+		margin-left: 0 - @ear_size * 0.5;
+	}
+}
+

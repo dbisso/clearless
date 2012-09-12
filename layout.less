@@ -43,6 +43,17 @@
 .box {
 	clear: both;
 	width: auto;
+	padding-right: 0;
+	.inner {
+		padding: 0 @flesh_size @flesh_size;
+	}
+}
+
+.box-flesh {
+	padding-right: @flesh_size;
+	.inner {
+		padding: @flesh_size;
+	}
 }
 
 .block {

@@ -18,7 +18,7 @@
 }
 
 .aligncenter {
-	clear: both;
+	// clear: both;
 	display: block;
 	margin: 0 auto;
 	text-align: center;
@@ -54,6 +54,10 @@
 	.inner {
 		padding: @flesh_size;
 	}
+}
+
+.wrapper-box-flesh {
+	margin-right: -@flesh_size;
 }
 
 .block {
@@ -147,6 +151,13 @@
 		z-index: 1;
 	}
 
+	.stack-top,
+	.stack-middle,
+	.stack-bottom {
+		left: 0;
+		right: 0;
+	}
+
 	.stack-top {
 		top: 0;
 	}
@@ -157,6 +168,22 @@
 
 	.stack-bottom {
 		bottom: 0;
+	}
+
+	.stack-left {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: auto;
+		width: 25%
+	}
+
+	.stack-right {
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: auto;
+		width: 25%;
 	}
 
 }

@@ -167,7 +167,7 @@
  *
  * An ear stick out to the side.
  */
-.ear-left {
+.ear-left() when ( isem(@ear_size) ), ( ispx(@ear_size) ), ( ispercent(@ear_size) ) {
 	margin-left: 0 - @ear_size;
 
 	.beta & {
@@ -175,7 +175,28 @@
 	}
 
 	.gamma & {
-		margin-left: 0 - @ear_size * 0.5;
+		margin-left: 0 - @ear_size * 0.75;
 	}
 }
+
+// Assume we are dealing with rems
+.ear-left {
+	@rem-size: 0 - @ear_size;
+	@px-size: @rem-size * @base-font-size;
+	margin-left: ~"@{px-size}px";
+	margin-left: ~"@{rem-size}rem";
+
+	.beta & {
+		@b-rem-size: @rem-size * 0.75;
+		@b-px-size: @px-size * 0.75;
+		margin-left: ~"@{b-px-size}px";
+		margin-left: ~"@{b-rem-size}rem";
+	}
+
+	.gamma & {
+		margin-left: ~"@{px-size}px";
+		margin-left: ~"@{rem-size}rem";
+	}
+}
+
 

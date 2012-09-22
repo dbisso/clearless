@@ -27,6 +27,10 @@
 		width: 60%;
 	}
 
+	(~".be-four-fifths-bp@{bp}") {
+		width: 80%;
+	}
+
 	(~".be-one-third-bp@{bp}") {
 		width: 33.333%;
 	}
@@ -94,8 +98,8 @@
 	}
 
 	(~".be-visible-bp@{bp}") {
+		display: block; // Assume block - should we do this?
 		display: initial;
-		*display: block; // Assume block - should we do this?
 	}
 }
 

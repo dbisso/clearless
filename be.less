@@ -86,15 +86,21 @@
 	}
 }
 
+// Ear
 .be-ear( @bp: 0 ) {
 	(~".be-ear-left-bp@{bp}") {
 		.ear-left;
 	}
 }
 
+// Visibility
 .be-visibility( @bp: 0 ) {
 	(~".be-hidden-bp@{bp}") {
 		display: none;
+	}
+
+	(~".be-block-bp@{bp}") {
+		display: block;
 	}
 
 	(~".be-visible-bp@{bp}") {
@@ -103,6 +109,7 @@
 	}
 }
 
+// All
 .be-all( @bp: 0 ) {
 	.be-grid( @bp );
 	.be-layout( @bp );

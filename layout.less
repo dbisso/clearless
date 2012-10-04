@@ -94,9 +94,9 @@
  * Some stuff from YUI grids included to avoid spaces between inline blocks.
  */
 .string {
-	letter-spacing: -0.3em; /* webkit */
+	letter-spacing: -0.31em; /* webkit */
 	*letter-spacing: normal; /* reset IE < 8 */
-    word-spacing: -0.3em; /* IE < 8 && gecko */
+    word-spacing: -0.43em; /* IE < 8 && gecko */
 
 	> * {
 		.inline-block();
@@ -105,6 +105,12 @@
 	    letter-spacing: normal;
 	    word-spacing: normal;
 	    vertical-align: top;
+	}
+
+	.string {
+		letter-spacing: -0.31em; /* webkit */
+		*letter-spacing: normal; /* reset IE < 8 */
+	    word-spacing: -0.43em; /* IE < 8 && gecko */
 	}
 }
 

@@ -190,6 +190,20 @@
 	height: @height;
 }
 
+.property(@property, @value, @prefixes: '', @base: true) {
+  -less-property: ~`(function(){var a=@{prefixes}.split(/\s+/),r=' null',i=0;@{base}&&@{prefixes}&&a.push('');for(;i<a.length;++i)b=a[i],r+=';\n  '+(b?'-'+b+'-':b)+'@{property}: '+'@{value}';return r})()`;
+}
+
+// REMify
+.remify(@attr, @rem-size) {
+	@px-size: @rem-size * @base-font-size;
+	@px-value: ~"@{px-size}px";
+	@rem-value: ~"@{rem-size}rem";
+	.property( @attr, @px-value );
+	.property( @attr, @rem-value );
+}
+
+
 // System --------------------------------
 
 .nudge-l( @pos ) when ( @pos = 0 ) {}

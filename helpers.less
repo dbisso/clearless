@@ -150,9 +150,21 @@
 .ir() {
 	border: 0;
 	font: 0/0 a;
+	text-indent: -9999em;
 	text-shadow: none;
 	color: transparent;
 	background-color: transparent;
+}
+
+.ir( @image, @width, @height, @display: block ) {
+	display: @display;
+	border: 0;
+	font: 0/0 a;
+	text-indent: -9999em;
+	text-shadow: none;
+	color: transparent;
+	background: transparent url(@image) no-repeat;
+	.size( @width, @height );
 }
 
 .hidden() {

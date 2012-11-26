@@ -50,6 +50,23 @@
 	}
 }
 
+.opacity(@opacity: 0.5) when not (@disable-filters) {
+	-moz-opacity: @opacity;
+	-khtml-opacity: @opacity;
+	-webkit-opacity: @opacity;
+	opacity: @opacity;
+	@opperc: @opacity * 100;
+	-ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+	filter: ~"alpha(opacity=@{opperc})";
+}
+
+.opacity(@opacity: 0.5) when (@disable-filters) {
+  -moz-opacity: @opacity;
+  -khtml-opacity: @opacity;
+  -webkit-opacity: @opacity;
+  opacity: @opacity;
+}
+
 #gradient {
 	.horizontal (@start-color, @end-color) when not (@disable-filters) {
 		background-color: @end-color;

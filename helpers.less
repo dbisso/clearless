@@ -41,6 +41,13 @@
 	transform: rotate(@rotation);
 }
 
+.scale(@ratio){
+  -webkit-transform: scale(@ratio);
+  -moz-transform: scale(@ratio);
+  -o-transform: scale(@ratio);
+  transform: scale(@ratio);
+}
+
 .placeholder(@color: #DDD) {
 	:-moz-placeholder {
 		color: @color;

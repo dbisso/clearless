@@ -220,8 +220,8 @@
 
 // Assume we are dealing with rems
 .ear-left {
-	@rem-size: 0 - @ear_size;
-	@px-size: @rem-size * @base-font-size;
+	@rem-size: 0 - unit(@ear_size);
+	@px-size: unit(@rem-size) * @base-font-size;
 	margin-left: ~"@{px-size}px";
 	margin-left: ~"@{rem-size}rem";
 

@@ -35,6 +35,13 @@
 	background-size: @arguments;
 }
 
+.hyphens(...) {
+	-moz-hyphens: @arguments;
+	-webkit-hyphens: @arguments;
+	-ms-hyphens: @arguments;
+	hyphens: @arguments;
+}
+
 .transition(@transition) {
 	-webkit-transition: @transition;
 	-moz-transition: @transition;

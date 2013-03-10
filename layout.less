@@ -103,7 +103,6 @@
 .string {
 	letter-spacing: -0.31em; /* webkit */
 	*letter-spacing: normal; /* reset IE < 8 */
-    word-spacing: -0.43em; /* IE < 8 && gecko */
 
 	> * {
 		.inline-block();
@@ -116,8 +115,17 @@
 
 	.string {
 		letter-spacing: -0.31em; /* webkit */
-		*letter-spacing: normal; /* reset IE < 8 */
-	    word-spacing: -0.43em; /* IE < 8 && gecko */
+		*letter-spacing: normal; /* IE6/7 reset */
+
+	    .opera-only :-o-prefocus, // Dummy class applies to opera and IE<8
+		.string {
+			word-spacing: -0.43em;
+		}
+	}
+
+	.opera-only :-o-prefocus,
+	.string {
+		word-spacing: -0.43em;
 	}
 }
 

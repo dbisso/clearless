@@ -104,8 +104,8 @@
 // REMify
 .remify(@attr, @rem-size) {
 	@px-size: @rem-size * @base-font-size;
-	@px-value: ~"@{px-size}px";
-	@rem-value: ~"@{rem-size}rem";
+	@px-value: unit(@px-size, px);
+	@rem-value: unit(@rem-size, rem);
 	.property( @attr, @px-value );
 	.property( @attr, @rem-value );
 }

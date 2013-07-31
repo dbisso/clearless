@@ -5,6 +5,25 @@
  * breakpoint-specific versions of various classes
  */
 
+@_grid_prefix: be-width;
+
+// Iterate through each column and define a class for it
+.grid-build( @index, @grid-count: 1 ) when ( @grid-count < @index )  {
+	.@{_grid_prefix}-@{grid-count}_@{index} {
+		width: round( ( 100% / @index ) * @grid-count, 3 );
+		*min-width: round( ( 100% / @index ) * @grid-count, 3 );
+	}
+
+	.grid-build( @index, @grid-count + 1 );
+}
+
+.grid-build( @index, @grid-count ) when ( @grid-count = @index ) {
+	.grid-build( @index - 1 );
+}
+
+.grid-build( 1 ) {}
+
+
 // Proportional Grid
 .be-grid( @bp: 0 ) {
 	(~".be-full-bp@{bp}") {
@@ -101,6 +120,12 @@
 
 	(~".be-aligncenter-bp@{bp}") {
 		.aligncenter;
+	}
+
+	(~".be-alignnone-bp@{bp}") {
+		float: none;
+		clear: none;
+		text-align: left;
 	}
 }
 

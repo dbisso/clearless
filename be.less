@@ -26,103 +26,103 @@
 
 // Proportional Grid
 .be-grid( @bp: 0 ) {
-	(~".be-full-bp@{bp}") {
+	.be-full-bp@{bp} {
 		width: 100%;
 		*min-width: 100%;
 	}
 
-	(~".be-one-half-bp@{bp}") {
+	.be-one-half-bp@{bp} {
 		width: 50%;
 		*min-width: 50%;
 	}
 
-	(~".be-one-fifth-bp@{bp}") {
+	.be-one-fifth-bp@{bp} {
 		width: 20%;
 		*min-width: 20%;
 	}
 
-	(~".be-two-fifths-bp@{bp}") {
+	.be-two-fifths-bp@{bp} {
 		width: 40%;
 		*min-width: 40%;
 	}
 
-	(~".be-three-fifths-bp@{bp}") {
+	.be-three-fifths-bp@{bp} {
 		width: 60%;
 		*min-width: 60%;
 	}
 
-	(~".be-four-fifths-bp@{bp}") {
+	.be-four-fifths-bp@{bp} {
 		width: 80%;
 		*min-width: 80%;
 	}
 
-	(~".be-one-third-bp@{bp}") {
+	.be-one-third-bp@{bp} {
 		width: 33.333%;
 		*min-width: 33.333%;
 	}
 
-	(~".be-two-thirds-bp@{bp}") {
+	.be-two-thirds-bp@{bp} {
 		width: 66.666%;
 		*min-width: 66.666%;
 	}
 
-	(~".be-one-quarter-bp@{bp}") {
+	.be-one-quarter-bp@{bp} {
 		width: 25%;
 		*min-width: 25%;
 	}
 
-	(~".be-three-quarters-bp@{bp}") {
+	.be-three-quarters-bp@{bp} {
 		width: 75%;
 		*min-width: 75%;
 	}
 
-	(~".be-auto-bp@{bp}") {
+	.be-auto-bp@{bp} {
 		width: auto;
 	}
 }
 
 // Layout
 .be-layout( @bp: 0 ) {
-	(~".be-string-bp@{bp}") {
+	.be-string-bp@{bp} {
 		.string;
 	}
 
-	(~".be-string-flesh-bp@{bp}") {
+	.be-string-flesh-bp@{bp} {
 		.string;
 	}
 
-	(~".be-stream-bp@{bp}") {
+	.be-stream-bp@{bp} {
 		.stream;
 	}
 
-	(~".be-stack-bp@{bp}") {
+	.be-stack-bp@{bp} {
 		.stack;
 	}
 
-	(~".be-box-bp@{bp}") {
+	.be-box-bp@{bp} {
 		.box;
 	}
 
-	(~".be-box-flesh-bp@{bp}") {
+	.be-box-flesh-bp@{bp} {
 		.box-flesh;
 	}
 }
 
 // Alignment
 .be-alignment( @bp: 0 ) {
-	(~".be-alignleft-bp@{bp}") {
+	.be-alignleft-bp@{bp} {
 		.alignleft;
 	}
 
-	(~".be-alignright-bp@{bp}") {
+	.be-alignright-bp@{bp} {
 		.alignright;
 	}
 
-	(~".be-aligncenter-bp@{bp}") {
+	.be-aligncenter-bp@{bp} {
 		.aligncenter;
 	}
 
-	(~".be-alignnone-bp@{bp}") {
+	.be-alignnone-bp@{bp} {
 		float: none;
 		clear: none;
 		text-align: left;
@@ -131,26 +131,26 @@
 
 // Ear
 .be-ear( @bp: 0 ) {
-	(~".be-ear-left-bp@{bp}") {
+	.be-ear-left-bp@{bp} {
 		.ear-left;
 	}
 }
 
 // Visibility
 .be-visibility( @bp: 0 ) {
-	(~".be-hidden-bp@{bp}") {
+	.be-hidden-bp@{bp} {
 		display: none;
 	}
 
-	(~".be-block-bp@{bp}") {
+	.be-block-bp@{bp} {
 		display: block;
 	}
 
-	(~".be-inline-block-bp@{bp}") {
+	.be-inline-block-bp@{bp} {
 		display: inline-block;
 	}
 
-	(~".be-visible-bp@{bp}") {
+	.be-visible-bp@{bp} {
 		display: block; // Assume block - should we do this?
 		display: initial;
 	}

@@ -110,6 +110,16 @@
 	.property( @attr, @rem-value );
 }
 
+// Add breakpoint label to head and body so we can read it in JS
+.bp-label( @bp ) {
+	head,
+	body:before {
+		@_bp: "bp@{bp}";
+		content: @_bp;
+		font-family: @_bp;
+		display: none;
+	}
+}
 
 // System --------------------------------
 

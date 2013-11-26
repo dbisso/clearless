@@ -101,10 +101,10 @@
  * Some stuff from YUI grids included to avoid spaces between inline blocks.
  */
 .string {
-	 letter-spacing: @inline-block-adjust; /* Webkit: collapse white-space between units */
-    *letter-spacing: normal; /* reset IE < 8 */
-    *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
-    text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+	 letter-spacing: @inline-block-adjust; // Webkit: collapse white-space between units
+    *letter-spacing: normal; // reset IE < 8
+    *word-spacing: -0.43em; // IE < 8: collapse white-space between units
+    text-rendering: optimizespeed; // Webkit: fixes text-rendering: optimizeLegibility
 
 	> * {
 		.inline-block();
@@ -119,7 +119,8 @@
 		letter-spacing: @inline-block-adjust; /* webkit */
 		*letter-spacing: normal; /* IE6/7 reset */
 
-	    .opera-only :-o-prefocus, // Dummy class applies to opera and IE<8
+		// Dummy class applies to opera and IE<8
+	    .opera-only :-o-prefocus,
 		.string {
 			word-spacing: -0.43em;
 		}

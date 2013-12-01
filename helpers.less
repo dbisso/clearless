@@ -42,6 +42,14 @@
 	*zoom: 1;
 }
 
+._ir {
+	border: 0;
+	font: 0/0 a;
+	text-indent: -9999em;
+	text-shadow: none;
+	color: transparent;
+}
+
 .ir() {
 	border: 0;
 	font: 0/0 a;
@@ -52,12 +60,8 @@
 }
 
 .ir( @image, @width, @height, @display: block ) {
+	&:extend(._ir);
 	display: @display;
-	border: 0;
-	font: 0/0 a;
-	text-indent: -9999em;
-	text-shadow: none;
-	color: transparent;
 	background: transparent url(@image) no-repeat;
 	.size( @width, @height );
 }

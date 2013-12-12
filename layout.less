@@ -120,25 +120,19 @@
 		*letter-spacing: normal;  //IE6/7 reset
 
 		// Dummy class applies to opera and IE<8
-
-		// Chrome Dev Tools chokes on this if it's combined with another selector
-		.opera-only :-o-prefocus {
+		// Chrome Dev Tools chokes on this if it's not followed by another ruleset.
+		.opera-only :-o-prefocus, .string {
 			word-spacing: -0.43em;
 		}
 
-		.string {
-			word-spacing: -0.43em;
-		}
+		_fake { display: inherit }
 	}
 
-	// Chrome Dev Tools chokes on this if it's combined with another selector
-	.opera-only :-o-prefocus {
+	.opera-only :-o-prefocus, .string {
 		word-spacing: -0.43em;
 	}
 
-	.string {
-		word-spacing: -0.43em;
-	}
+	_fake { display: inherit }
 }
 
 .blocks {
